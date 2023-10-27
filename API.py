@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from uvicorn import run
+from pydantic import BaseModel
 import os
 import joblib
 
@@ -20,6 +21,14 @@ app.add_middleware(
 
 # Loading model
 vehicle_emissions_model = joblib.load("vehicle_emissions_model.pkl")
+
+# Desfining a model to specify the expected input format
+class InputData(BaseModel):
+    engine_size: int
+    cyliners: int
+    transmission: str
+    fuel_type: str
+    fuel_consumption: int
 
 @app.post("/predict_vehicle_emissions")
 def predict_vehicle_emissions():
