@@ -24,11 +24,11 @@ vehicle_emissions_model = joblib.load("vehicle_emissions_model.pkl")
 
 # Desfining a model to specify the expected input format
 class InputData(BaseModel):
-    engine_size: int
-    cyliners: int
-    transmission: str
-    fuel_type: str
-    fuel_consumption: int
+    Engine_Size_L: float
+    Cyliners: int
+    Transmission: str
+    Fuel_Type: str
+    Fuel_Consumption_Comb: int
 
 @app.post("/predict_vehicle_emissions")
 def predict_vehicle_emissions():
