@@ -2,8 +2,22 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 import pandas as pd
 import joblib
+import os
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
+
+origins = ["*"]
+methods = ["*"]
+headers = ["*"]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins = origins,
+    allow_credentials = True,
+    allow_methods = methods,
+    allow_headers = headers
+)
 
 class InputModel(BaseModel):
     EngineSize_L: float
@@ -40,3 +54,8 @@ async def endpoint(data: InputModel):
     except Exception as e:
         # Handling errors
         raise HTTPException(status_code=500, detail=str(e))
+
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8000))
+    run(app, host="0.0.0.0", port=port)
