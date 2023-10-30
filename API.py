@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
+import joblib
 
 app = FastAPI()
 
@@ -10,7 +11,8 @@ class input_model(BaseModel):
     FuelType: str
     FuelConsumptionComb: float
 
+vehicle_emissions_model = joblib.load("vehicle_emissions_model.pkl")
 
-@app.get('/')
-async def endpoint():
-    return {"message": "Endpoint set up successfully"}
+@app.post('/')
+async def endpoint(data: input_model):
+    return data
