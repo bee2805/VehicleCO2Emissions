@@ -80,7 +80,7 @@ nbconvert==7.6.0
 nbformat==5.8.0
 nest-asyncio==1.5.8
 notebook_shim==0.2.3
-numpy==1.24.3
+numpy==1.21.6
 oauthlib==3.2.2
 opt-einsum==3.3.0
 overrides==7.4.0
