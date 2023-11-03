@@ -4,6 +4,7 @@ import pandas as pd
 import joblib
 import os
 from fastapi.middleware.cors import CORSMiddleware
+from uvicorn import run
 
 app = FastAPI()
 
@@ -59,3 +60,6 @@ async def endpoint(data: InputModel):
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8000))
     run(app, host="0.0.0.0", port=port)
+
+
+# run: uvicorn API:app --reload
