@@ -4,7 +4,7 @@ run ```uvicorn API:app --reload```
 
 ## Testing
 
-Open postman and send a post request with the required parameters: 
+Open your chosen API platform and send a post request with the required parameters: 
 
 ```
 {
