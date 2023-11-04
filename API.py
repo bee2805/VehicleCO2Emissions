@@ -6,6 +6,9 @@ import os
 from fastapi.middleware.cors import CORSMiddleware
 from uvicorn import run
 
+# Set the environment variable
+os.environ['SKLEARN_ALLOW_DEPRECATED_SKLEARN_PACKAGE_INSTALL'] = 'True'
+
 app = FastAPI()
 
 origins = ["*"]
