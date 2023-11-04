@@ -130,7 +130,7 @@ starlette==0.27.0
 tensorboard>=2.0.0,<=2.11.2
 tensorboard-data-server==0.7.1
 tensorflow>=2.0.0,<=2.11.0
-tensorflow-datasets==4.9.3
+tensorflow-datasets>=1.0.1,<=4.8.2
 tensorflow-estimator==2.13.0
 tensorflow-macos==2.13.0
 tensorflow-metadata==1.14.0
