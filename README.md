@@ -1,6 +1,10 @@
 # VehicleCO2Emissions
+
+This API allows you to predict the emissions of your vehicle based on certain parameters, such as engine size, amount of cylinders and gears, your transmission type and fuel consumption.
+
+## Running the API
  
-run ```uvicorn API:app --reload```
+run ```uvicorn API:app --reload``` in your terminal
 
 ## Testing
 

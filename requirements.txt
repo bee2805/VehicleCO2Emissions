@@ -20,7 +20,7 @@ cffi==1.15.1
 charset-normalizer==3.2.0
 click==8.1.7
 comm==0.1.4
-contourpy==1.1.1
+contourpy>=1.0.6,<1.2.0
 cycler==0.12.1
 Cython==3.0.4
 debugpy==1.8.0
