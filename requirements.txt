@@ -29,7 +29,7 @@ defusedxml==0.7.1
 dm-tree==0.1.8
 etils>=0.2.0
 executing==1.2.0
-fastapi==0.104.0
+fastapi>=0.1.0,<=0.103.2
 fastjsonschema==2.18.0
 flatbuffers==23.5.26
 fonttools==4.43.1
